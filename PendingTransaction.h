@@ -1,0 +1,13 @@
+//
+// Created by jinx on 17/11/25.
+//
+
+#ifndef BANKINGSYSTEM_PENDINGTRANSACTION_H
+#define BANKINGSYSTEM_PENDINGTRANSACTION_H
+
+
+class PendingTransaction {
+};
+
+
+#endif //BANKINGSYSTEM_PENDINGTRANSACTION_H
