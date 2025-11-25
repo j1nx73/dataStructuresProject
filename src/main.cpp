@@ -1,6 +1,8 @@
-#include <iostream>
+#include "bank_system.h"
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+int main()
+{
+    BankSystem app;
+    app.run();
     return 0;
 }

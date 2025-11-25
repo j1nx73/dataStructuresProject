@@ -1,19 +1,13 @@
-cmake_minimum_required(VERSION 4.0)
-project(bankingSystem)
+cmake_minimum_required(VERSION 3.10)
+project(BankingSystem CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(bankingSystem main.cpp
-        Account.cpp
-        Account.h
-        Transactions.cpp
-        Transactions.h
-        BST.cpp
-        BST.h
-        Queue.cpp
-        Queue.h
-        PendingTransaction.cpp
-        PendingTransaction.h
-        Bank.cpp
-        Bank.h
-        Utils.h)
+add_executable(banking_system
+        main.cpp
+        bank_system.cpp
+        account.cpp
+        transaction.cpp
+        transaction_queue.cpp
+)
