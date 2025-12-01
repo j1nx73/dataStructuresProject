@@ -1,0 +1,3 @@
+/Users/xojambetov_islam/CLionProjects/bankingSystem/build/CMakeFiles/bankingSystem.dir
+/Users/xojambetov_islam/CLionProjects/bankingSystem/build/CMakeFiles/edit_cache.dir
+/Users/xojambetov_islam/CLionProjects/bankingSystem/build/CMakeFiles/rebuild_cache.dir

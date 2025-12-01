@@ -3,6 +3,8 @@
 #include <iostream>
 #include <limits>
 
+#include "persistence.h" // for saveBankToFiles
+
 namespace bank {
 
 namespace {
@@ -56,6 +58,7 @@ void printMenu() {
     std::cout << "7. Show Account Summary\n";
     std::cout << "8. Show Account History\n";
     std::cout << "9. Apply Interest to All Accounts\n";
+    std::cout << "10. Save Data Now\n";
     std::cout << "0. Exit\n";
     std::cout << "-------------------------------------\n";
 }
@@ -129,6 +132,15 @@ void runMainMenu(Bank& bank) {
             case 9: { // Apply interest
                 double rate = askDouble("Enter interest rate (e.g. 0.01 for 1%): ");
                 applyInterestAll(bank, rate);
+                waitForEnter();
+                break;
+            }
+            case 10: { // Save data now
+                if (saveBankToFiles(bank, "accounts.csv", "transactions.csv")) {
+                    std::cout << "Data saved successfully.\n";
+                } else {
+                    std::cout << "Failed to save data.\n";
+                }
                 waitForEnter();
                 break;
             }

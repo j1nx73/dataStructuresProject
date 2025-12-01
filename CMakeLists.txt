@@ -18,4 +18,8 @@ add_executable(bankingSystem
         src/bank_service.cpp
         include/ui.h
         src/ui.cpp
+        include/auth.h
+        src/auth.cpp
+        include/persistence.h
+        src/persistence.cpp
 )
