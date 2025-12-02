@@ -14,7 +14,7 @@ namespace bank {
     /// Clears any leftover characters from the standard input buffer
     /// until a newline is found.
     ///
-    /// Use this after failed std::cin >> operations to reset the
+    /// Using this after failed std::cin >> operations to reset the
     /// input stream to a clean state.
     void clearInput();
 

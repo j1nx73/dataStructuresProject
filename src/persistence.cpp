@@ -80,7 +80,7 @@ bool saveBankToFiles(const Bank& bank,
         return false;
     }
 
-    // Optional: write headers so Excel sees column names.
+    // Write headers so Excel sees column names.
     accOut << "accountNumber,holderName,balance\n";
     txOut << "accountNumber,type,amount,datetime\n";
 
@@ -122,7 +122,6 @@ bool loadBankFromFiles(Bank& bank,
                     int accNum     = std::stoi(accNumStr);
                     double balance = std::stod(balanceStr);
 
-                    // Use high-level API to create account.
                     // We trust the CSV not to contain duplicates.
                     createAccount(bank, accNum, name, balance);
                     anyLoaded = true;

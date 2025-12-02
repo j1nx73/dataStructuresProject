@@ -1,10 +1,10 @@
 #include <vector>
 #include <iostream>
 
-#include "bank_service.h"
-#include "ui.h"
-#include "auth.h"
-#include "persistence.h"
+#include "/Users/xojambetov_islam/CLionProjects/bankingSystem/include/bank_service.h"
+#include "/Users/xojambetov_islam/CLionProjects/bankingSystem/include/ui.h"
+#include "/Users/xojambetov_islam/CLionProjects/bankingSystem/include/auth.h"
+#include "/Users/xojambetov_islam/CLionProjects/bankingSystem/include/persistence.h"
 
 int main() {
     using namespace bank;

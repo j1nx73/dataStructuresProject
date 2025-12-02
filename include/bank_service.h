@@ -53,7 +53,6 @@ bool enqueuePendingTransaction(Bank& bank,
 
 /// Processes all pending transactions in FIFO order.
 /// For each successful operation, updates balance and adds a history record.
-/// Logs basic messages to std::cout.
 void processPendingQueue(Bank& bank);
 
 /// Prints a summary of all accounts (in-order traversal of BST).
@@ -69,7 +68,7 @@ bool printAccountByNumber(const Bank& bank,
 bool printAccountHistory(const Bank& bank,
                          int accountNumber);
 
-/// Optional: apply a simple interest rate to all accounts.
+/// Interest feature: apply a simple interest rate to all accounts.
 /// Example: rate = 0.01 means +1% of current balance.
 /// A transaction of type Interest is added for each account.
 void applyInterestAll(Bank& bank, double rate);

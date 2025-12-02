@@ -45,7 +45,7 @@ void addTransaction(Transaction*& head,
 
 void printTransactions(const Transaction* head) {
     const Transaction* current = head;
-    int index = 1; // human-friendly index starting from 1
+    int index = 1; // user-friendly index starting from 1
 
     // Traverse the list from head to end.
     while (current != nullptr) {

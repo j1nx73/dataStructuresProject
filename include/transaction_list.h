@@ -2,15 +2,14 @@
 #define TRANSACTION_LIST_H
 
 #include <string>
-#include <iosfwd> // forward declarations for std::ostream if needed
 
 namespace bank {
 
-/// Represents the type of a bank transaction.
+/// Represents the type of bank transaction.
 ///
 /// Deposit  - money is added to the account
 /// Withdraw - money is removed from the account
-/// Interest - interest is added to the account (optional feature)
+/// Interest - interest is added to the account
 enum class TransactionType {
     Deposit,
     Withdraw,
@@ -58,7 +57,7 @@ void addTransaction(Transaction*& head,
 /// Prints all transactions in the list to std::cout.
 ///
 /// Format:
-///   index) TYPE: amount on datetime
+///   index TYPE: amount on datetime
 ///
 /// If the list is empty, prints "(no transactions)".
 void printTransactions(const Transaction* head);

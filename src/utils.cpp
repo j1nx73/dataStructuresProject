@@ -10,13 +10,13 @@
 namespace bank {
 
     std::string getCurrentDateTime() {
-        // 1) Get current time point from the system clock.
+        // 1) Getting current time point from the system clock.
         auto now = std::chrono::system_clock::now();
 
-        // 2) Convert to time_t (seconds since epoch).
+        // 2) Converting to time_t (seconds since epoch).
         std::time_t now_c = std::chrono::system_clock::to_time_t(now);
 
-        // 3) Convert to local calendar time (year, month, day, etc.).
+        // 3) Converting to local calendar time (year, month, day, etc.).
         // std::localtime returns a pointer to a static std::tm.
         std::tm* tm_ptr = std::localtime(&now_c);
         if (!tm_ptr) {
@@ -24,26 +24,26 @@ namespace bank {
             return "0000-00-00 00:00:00";
         }
 
-        // 4) Format the time into a string using std::put_time.
+        // 4) Formatting the time into a string using std::put_time.
         std::ostringstream oss;
         oss << std::put_time(tm_ptr, "%Y-%m-%d %H:%M:%S");
         return oss.str();
     }
 
     void clearInput() {
-        // Reset error flags on the stream, in case a previous read failed.
+        // Resetting error flags on the stream, in case a previous read failed.
         std::cin.clear();
 
-        // Ignore characters until newline or EOF.
+        // Ignoring characters until newline or EOF.
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 
     void waitForEnter() {
         std::cout << "Press ENTER to continue...";
-        // Make sure there is no leftover data in input buffer.
+        // Making sure there is no leftover data in input buffer.
         clearInput();
-        // Wait for a newline (user pressing ENTER).
-        std::cin.get();
+        // Waiting for a newline (user pressing ENTER).
+        //std::cin.get(); -> makes double enter, just removed for this time
     }
 
 } // namespace bank

@@ -6,10 +6,10 @@
 
 namespace bank {
 
-    /// Simple representation of a system user (operator/admin).
+    /// Simple representation of a system user (admin).
     struct User {
         std::string username;
-        std::string password;  // plain text (OK for a DS course project)
+        std::string password;
         bool isAdmin{false};
     };
 
@@ -21,7 +21,6 @@ namespace bank {
                           const std::string& username,
                           const std::string& password);
 
-    /// Run a small login loop in the terminal.
     /// Returns true if login successful within maxAttempts, false otherwise.
     bool login(const std::vector<User>& users, int maxAttempts = 3);
 

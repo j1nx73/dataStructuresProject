@@ -1,5 +1,4 @@
 #include "auth.h"
-
 #include <iostream>
 
 namespace bank {
@@ -8,7 +7,6 @@ namespace bank {
         users.clear();
 
         // For this project we hard-code one admin account.
-        // You can later extend this to load from file.
         users.push_back(User{"admin", "1234", true});
     }
 

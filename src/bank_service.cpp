@@ -11,7 +11,7 @@ void initBank(Bank& bank) {
 
 void destroyBank(Bank& bank) {
     freeAccountTree(bank.accountsRoot);   // frees all accounts + histories
-    freeQueue(bank.pendingQueue);         // frees any remaining pending txns
+    freeQueue(bank.pendingQueue);         // frees any remaining pending transactions
     bank.accountsRoot = nullptr;
 }
 

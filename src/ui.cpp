@@ -47,7 +47,7 @@ std::string askLine(const std::string& prompt) {
 
 void printMenu() {
     std::cout << "\n=====================================\n";
-    std::cout << "      Banking System (DS Project)    \n";
+    std::cout << "      Banking System App    \n";
     std::cout << "=====================================\n";
     std::cout << "1. Create Account\n";
     std::cout << "2. Deposit Money (Direct)\n";
@@ -58,12 +58,12 @@ void printMenu() {
     std::cout << "7. Show Account Summary\n";
     std::cout << "8. Show Account History\n";
     std::cout << "9. Apply Interest to All Accounts\n";
-    std::cout << "10. Save Data Now\n";
+    std::cout << "10. Save Data\n";
     std::cout << "0. Exit\n";
     std::cout << "-------------------------------------\n";
 }
 
-} // anonymous namespace
+}
 
 void runMainMenu(Bank& bank) {
     int choice = -1;
@@ -135,7 +135,7 @@ void runMainMenu(Bank& bank) {
                 waitForEnter();
                 break;
             }
-            case 10: { // Save data now
+            case 10: { // Save data
                 if (saveBankToFiles(bank, "accounts.csv", "transactions.csv")) {
                     std::cout << "Data saved successfully.\n";
                 } else {
@@ -146,6 +146,7 @@ void runMainMenu(Bank& bank) {
             }
             case 0:
                 std::cout << "Exiting...\n";
+                std::cout << "GoodBye!...\n";
                 break;
             default:
                 std::cout << "Unknown option. Please try again.\n";
